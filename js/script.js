@@ -3,13 +3,13 @@
     const chatForm = document.getElementById('chat-form');
     let lastMessageCount = 0;
 
-    // Function to fetch and display messages
+
     async function fetchMessages() {
         try {
             const response = await fetch('api.php');
             const messages = await response.json();
             
-            // Only update if there are new messages
+         
             if (messages.length !== lastMessageCount) {
                 chatBox.innerHTML = '';
                 messages.forEach(msg => {
@@ -23,7 +23,7 @@
                     chatBox.appendChild(messageDiv);
                 });
                 
-                // Scroll to bottom
+                
                 chatBox.scrollTop = chatBox.scrollHeight;
                 lastMessageCount = messages.length;
             }
@@ -32,14 +32,14 @@
         }
     }
 
-    // Function to send a message
+    
     chatForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const user = document.getElementById('user').value;
         const messageInput = document.getElementById('message');
         const message = messageInput.value;
 
-        // Use client-side timestamp
+        
         const now = new Date();
         const timestamp = now.getFullYear() + '-' + 
             String(now.getMonth() + 1).padStart(2, '0') + '-' + 
@@ -67,7 +67,7 @@
         }
     });
 
-    // Initial fetch and set interval
+   
     fetchMessages();
     setInterval(fetchMessages, 3000); // Poll for new messages every 3 seconds
 });

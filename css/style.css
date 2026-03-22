@@ -1,4 +1,4 @@
-﻿/* Hacker/Terminal Theme Styling - FULLY RESPONSIVE */
+
 :root {
     --bg-dark: #0a0a0a;
     --terminal-green: #00ff41;
@@ -29,7 +29,7 @@ body {
     min-height: 80vh;
 }
 
-/* Scanline Effect */
+
 .chat-container::before {
     content: " ";
     display: block;
@@ -62,7 +62,7 @@ body {
     border-bottom: 1px solid var(--terminal-border);
 }
 
-/* Custom Scrollbar */
+
 .chat-box::-webkit-scrollbar {
     width: 6px;
 }
@@ -109,7 +109,7 @@ body {
     background: #050505;
 }
 
-/* Terminal Input */
+
 .form-control {
     background: #000 !important;
     border: 1px solid var(--terminal-border) !important;
@@ -146,9 +146,9 @@ body {
     box-shadow: var(--text-shadow);
 }
 
-/* RESPONSIVE MEDIA QUERIES */
 
-/* Mobile Phones */
+
+
 @media (max-width: 576px) {
     .chat-container {
         width: 100%;
@@ -184,7 +184,7 @@ body {
     }
 }
 
-/* Tablets */
+
 @media (min-width: 577px) and (max-width: 992px) {
     .chat-container {
         width: 90%;
